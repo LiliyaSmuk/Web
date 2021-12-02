@@ -1,0 +1,83 @@
+<html>
+  <head> </head>
+  <script>
+    // Задача 1
+    function showMessage() {
+      let message = "Привет, я JavaScript!"; // локальная переменная
+      alert(message);
+    }
+    showMessage(); // Привет, я JavaScript!
+    //alert(message); // <-- будет ошибка, т.к. переменная видна только внутри функции
+
+    // Задача 2
+    function palindrom() {
+      smuk = "смук";
+      var pol = "";
+      for (i = smuk.length - 1; i >= 0; i--) {
+        pol += smuk[i];
+      }
+      if (pol == smuk) {
+        alert(smuk + " - полиндром");
+      } else {
+        alert(smuk + " - не полиндром");
+      }
+    }
+    palindrom();
+
+    // Задача 5
+
+    class Clock {
+      constructor({ template }) {
+        this.template = template;
+      }
+      render() {
+        let date = new Date();
+        let hours = date.getHours();
+        if (hours < 10) {
+          hours = "0" + hours;
+        }
+        let mins = date.getMinutes();
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+        let secs = date.getSeconds();
+        if (secs < 10) {
+          secs = "0" + secs;
+        }
+        let output = this.template
+          .replace("h", hours)
+          .replace("m", mins)
+          .replace("s", secs);
+        console.log(output);
+      }
+      stop() {
+        clearInterval(this.timer);
+      }
+      start() {
+        this.render();
+        this.timer = setInterval(() => this.render(), 1000);
+      }
+    }
+    let clock = new Clock({ template: "h:m:s" });
+    clock.start();
+
+    // Задача 6
+    class Name {
+      constructor(name) {
+        this.name = name;
+      }
+
+      reverse_name() {
+        var pol = "";
+        for (let i = this.name.length - 1; i >= 0; i--) {
+          pol += this.name[i];
+        }
+        alert(pol);
+      }
+    }
+
+    // Использование:
+    let name = new Name("Лиля");
+    name.reverse_name();
+  </script>
+</html>
