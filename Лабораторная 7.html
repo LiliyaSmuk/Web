@@ -1,0 +1,67 @@
+<html>
+  <head> </head>
+  <script>
+    //Задание 1
+    const arr1 = [1, 2, 3];
+    const arr2 = arr1.map((item) => item * 2); // выводит [ 2, 4, 6 ]
+    const arr3 = arr1.map((item) => (item + 10) * 3); // выводит [ 33, 36, 39 ]
+    console.log(arr2);
+    console.log(arr3);
+
+    //____________________________________________________________________________
+
+    //Задание 2
+    const arr_year = [2000, 2001, 2002];
+    const arr_age = arr_year.map((item) => 2021 - item); // выводит [ 21, 20, 19 ]
+    console.log(arr_age);
+
+    //____________________________________________________________________________
+
+    //Задание 3
+    const persons = [
+      { name: "Peter", age: 16, admin: true },
+      { name: "Mark", age: 18, admin: false },
+      { name: "John", age: 27, admin: true },
+      { name: "Jane", age: 14, admin: false },
+      { name: "Tony", age: 24, admin: true },
+    ];
+    const fullAge = persons.filter((person) => person.age >= 18);
+    const isAdmin = persons.filter((person) => person.admin == true);
+    for (let i = 0; i < isAdmin.length; i++) {
+      alert(isAdmin[i].name);
+    }
+    console.log(fullAge);
+    console.log(isAdmin);
+
+    //____________________________________________________________________________
+
+    //Задание 4
+    const qqq = [1, 2, 3, 4, 5];
+    const sr = qqq.reduce(function (accumulator, currentValue, _, { length }) {
+      return accumulator + currentValue / length;
+    }, 0);
+    console.log(sr);
+
+    //____________________________________________________________________________
+
+    //Задание 5
+
+    const strArray = ["JavaScript", "Python", "PHP", "Java", "C"];
+
+    function mapForEach(arr, fn) {
+      const newArray = [];
+      for (let i = 0; i < arr.length; i++) {
+        newArray.push(fn(arr[i]));
+      }
+      return newArray;
+    }
+    const lenArray = mapForEach(strArray, function (item) {
+      if (item.length <= 3) {
+        return 0;
+      } else {
+        return 1;
+      }
+    });
+    console.log(lenArray);
+  </script>
+</html>

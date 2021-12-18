@@ -1,0 +1,142 @@
+<html>
+  <head> </head>
+  <script>
+    // Задание 1
+    let user = {
+      name: "Джон",
+      age: 30,
+    };
+    user.sayHi = function () {
+      alert("Привет!");
+    };
+
+    user.sayHi(); // Привет!
+
+    //__________________________________________________________
+
+    // Задание 2
+    let customer = {
+      name: "Лилия",
+      surname: "Смук",
+      phone: "8916122****",
+      city: "Москва",
+      discount_card: "Есть карта магазина",
+      personal_discount: "5%",
+    };
+
+    alert(customer.name);
+    alert(customer.personal_discount);
+    alert(customer.discount_card);
+
+    //__________________________________________________________
+
+    // Задание 3
+    //пользователи
+    let user1 = {
+      name: "Наташа",
+      city: "Москва",
+      phone: "8910527****",
+    };
+
+    let user2 = {
+      name: "Юля",
+      city: "Сургут",
+      phone: "8917242****",
+    };
+
+    let user3 = {
+      name: "Катя",
+      city: "Тверь",
+      phone: "8905100****",
+    };
+
+    let users = [user1, user2, user3];
+
+    for (let user of users) {
+      if (user.city == "Сургут") {
+        alert(user.name);
+      }
+    }
+    //заказы
+    let order1 = {
+      number: "№123456",
+      cost: 1350 + " руб.",
+    };
+
+    let order2 = {
+      number: "№98765",
+      cost: 1730 + " руб.",
+    };
+
+    let order3 = {
+      number: "№765489",
+      cost: 2305 + " руб.",
+    };
+
+    let orders = [order1, order2, order3];
+
+    for (let order of orders) {
+      if (order.cost >= 1500 + " руб.") {
+        alert(order.number);
+      }
+    }
+    //рестораны
+    let restaurant1 = {
+      name: "Додо пицца",
+      kitchen: "Пиццерия",
+    };
+
+    let restaurant2 = {
+      name: "Тануки",
+      kitchen: "Японская кухня",
+    };
+
+    let restaurant3 = {
+      name: "Виват Пицца",
+      kitchen: "Итальянская кухня",
+    };
+
+    let restaurants = [restaurant1, restaurant2, restaurant3];
+
+    for (let restaurant of restaurants) {
+      if (restaurant.name == "Тануки") {
+        alert(restaurant.kitchen);
+      }
+    }
+
+    //____________________________________________________________________
+
+    // Задание 4
+    function Group(name) {
+      this.name = name;
+
+      this.show = function () {
+        alert(this.name);
+      };
+    }
+
+    let PI20_6 = new Group(["Лиля", " Юля", " Саша", " Вова", " Аня"]);
+    PI20_6.show();
+
+    //____________________________________________________________________
+
+    // Задание 5
+    function Student(name) {
+      this.name = name;
+      this.marks = [];
+
+      this.sayHi = function () {
+        alert("Меня зовут: " + this.name);
+      };
+
+      this.addMark = function (mark) {
+        this.marks.push(mark);
+        alert("Оценки: " + this.marks);
+      };
+    }
+
+    let vasya = new Student("Вася");
+    vasya.sayHi(); // Меня зовут: Вася
+    vasya.addMark([5, 4, 5, 3]);
+  </script>
+</html>

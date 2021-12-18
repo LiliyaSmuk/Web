@@ -1,0 +1,109 @@
+<html>
+  <head> </head>
+  <script>
+    //Задание 1
+    let sum = (a, b) => a + b;
+    let razn = (a, b) => a - b;
+    let proizv = (a, b) => a * b;
+    let del = (a, b) => a / b;
+
+    alert("Сумма " + sum(10, 5));
+    alert("Разность " + razn(10, 5));
+    alert("Произвделение " + proizv(10, 5));
+    alert("Деление " + del(10, 5));
+
+    //____________________________________________________________________________
+
+    //Задание 2
+    let age = prompt("Сколько Вам лет?", 18);
+
+    let welcome =
+      age < 18 ? () => alert("Привет") : () => alert("Здравствуйте!");
+
+    welcome();
+
+    //____________________________________________________________________________
+
+    //Задание 3
+    let isPalindrome = (word) => {
+      var pol = "";
+      for (i = word.length - 1; i >= 0; i--) {
+        pol += word[i];
+      }
+      if (pol == word) {
+        return " -  палиндром";
+      } else {
+        return " -  не палиндром";
+      }
+    };
+
+    let a1 = "смук";
+    alert(a1 + " " + isPalindrome(a1));
+    let a2 = "анна";
+    alert(a2 + " " + isPalindrome(a2));
+
+    //____________________________________________________________________________
+
+    //Задание 4
+    let a = [1, 2, 3, 4, 5];
+
+    let sr_znach = (a) => {
+      let sum = 0;
+      let kol = 0;
+      for (let i of a) {
+        sum += i;
+        kol++;
+      }
+      return "Среднее значение = " + sum / kol;
+    };
+
+    alert(sr_znach(a));
+
+    //____________________________________________________________________________
+
+    //Задание 5
+    let NewYear = (day) => 31 - day;
+    alert(NewYear(18));
+
+    //____________________________________________________________________________
+
+    //Задание 6
+    let empty = () => {};
+    alert(empty());
+
+    //____________________________________________________________________________
+
+    //Задание 7
+    let b = [1, 2, 3, 4, 5];
+
+    let summa = (b) => {
+      let sum = 0;
+      for (let i of b) {
+        sum += i;
+      }
+      return "Сумма всех элементов = " + sum;
+    };
+
+    let chetn = (b) => {
+      c = [];
+      for (let i of b) {
+        if (i % 2 == 0) {
+          c.push(i);
+        }
+      }
+      return "Четные числа - " + c;
+    };
+
+    let mnoj2 = (b) => {
+      c = [];
+      for (let i of b) {
+        c.push(i * 2);
+      }
+      return "Массив умноженный на 2 = " + c;
+    };
+
+    alert(summa(b));
+    alert(chetn(b));
+    alert(mnoj2(b));
+  </script>
+</html>
