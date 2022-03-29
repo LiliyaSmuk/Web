@@ -1,0 +1,13 @@
+body {
+  background-color: #fdbb58;
+  font-size: 22px;
+  color: purple;
+  text-align: center;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px;
+}
