@@ -1,0 +1,28 @@
+body {
+  background-color: #fdbb58;
+  font-size: 22px;
+  color: purple;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.on {
+  color: #9b95d7;
+  background-color: #514c84;
+}
+.off {
+  color: #201973;
+  background-color: #9a95d8;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 22px;
+  color: purple;
+  text-align: center;
+}
